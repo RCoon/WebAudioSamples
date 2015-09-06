@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-<meta name="viewport" content="width=device-width">
-<style type="text/css"></style>
-
-<link rel="stylesheet" id="coToolbarStyle" href="chrome-extension://cjabmdjcfcfdmffimndhafhblfmpjdpe/toolbar/styles/placeholder.css" type="text/css">
-<script type="text/javascript" id="cosymantecbfw_removeToolbar"> (function () {
-	var toolbarElement = {},
-	parent = {},
-	interval = 0,
-	retryCount = 0,
-	isRemoved = false;
-	if (window.location.protocol === 'file:') {
-		interval = window.setInterval(function () {
-			toolbarElement = document.getElementById('coFrameDiv');
-			if (toolbarElement) {
-				parent = toolbarElement.parentNode;
-				if (parent) {
-					parent.removeChild(toolbarElement);
-					isRemoved = true;
-					if (document.body && document.body.style) {
-						document.body.style.setProperty('margin-top', '0px', 'important');
-						}
-					}
-				}
-				retryCount += 1;
-				if (retryCount > 10 || isRemoved) {
-					window.clearInterval(interval);
-				}
-			}, 10);
-		}
-	})
-	();
-	
-</script><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
-
+<html><head><meta name="viewport" content="width=device-width"><style type="text/css"></style><link rel="stylesheet" id="coToolbarStyle" href="chrome-extension://cjabmdjcfcfdmffimndhafhblfmpjdpe/toolbar/styles/placeholder.css" type="text/css"><script type="text/javascript" id="cosymantecbfw_removeToolbar">(function () {				var toolbarElement = {},					parent = {},					interval = 0,					retryCount = 0,					isRemoved = false;				if (window.location.protocol === 'file:') {					interval = window.setInterval(function () {						toolbarElement = document.getElementById('coFrameDiv');						if (toolbarElement) {							parent = toolbarElement.parentNode;							if (parent) {								parent.removeChild(toolbarElement);								isRemoved = true;								if (document.body && document.body.style) {									document.body.style.setProperty('margin-top', '0px', 'important');								}							}						}						retryCount += 1;						if (retryCount > 10 || isRemoved) {							window.clearInterval(interval);						}					}, 10);				}			})();</script><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
 .en-markup-crop-options {
     top: 18px !important;
     left: 50% !important;
@@ -48,13 +11,4 @@
 .en-markup-crop-options div div:first-of-type {
     margin-left: 0px !important;
 }
-</style>
-</head>
-<body>
-<video controls="" autoplay="" name="media"><source src="/Samples/Alarm.mp3" type="audio/mpeg">
-</video>
-</body>
-<div id="coFrameDiv" style="height:0px;display:none;">
-<iframe id="coToolbarFrame" src="chrome-extension://cjabmdjcfcfdmffimndhafhblfmpjdpe/toolbar/placeholder.html" style="height:0px;width:100%;display:none;"></iframe>
-</div>
-</html>
+</style></head><body><video controls="" autoplay="" name="media"><source src="https://github.com/RCoon/WebAudioSamples/blob/gh-pages/Samples/Alarm.mp3" type="audio/mpeg"></video></body><div id="coFrameDiv" style="height:0px;display:none;"><iframe id="coToolbarFrame" src="chrome-extension://cjabmdjcfcfdmffimndhafhblfmpjdpe/toolbar/placeholder.html" style="height:0px;width:100%;display:none;"></iframe></div></html>
